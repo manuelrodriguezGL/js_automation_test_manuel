@@ -39,10 +39,10 @@ describe('Shopping cart page', () => {
        // browser.pause(2000); // Just a trick to see login results
         AccountPage.moveToClickCasualDressesCategory();
         assert.strictEqual(ProductPage.pageHeader.getText(), 'CASUAL DRESSES ');
-        browser.pause(2000); // Just a trick to see cart results
+        //browser.pause(2000); // Just a trick to see cart results
         ProductPage.moveToProduct();
         ProductPage.clickAddToCartButton();
-        browser.pause(2000); // Just a trick to see cart results
+        //browser.pause(2000); // Just a trick to see cart results
 
     });
 })
