@@ -2,8 +2,7 @@ const assert = require('assert');
 import EmailUtils from '../utils/emailUtils';
 import HomePage from '../pages/homePage';
 import LoginPage from '../pages/loginPage';
-import loginPage from '../pages/loginPage';
-import emailUtils from '../utils/emailUtils';
+import AccountPage from '../pages/accountPage';
 
 
 describe('Shopping cart page', () => {
@@ -28,9 +27,9 @@ describe('Shopping cart page', () => {
         }, 15000, 'Wrong header! Found: ' + LoginPage.pageHeader.getText());
 
         //Fill user details
-        LoginPage.createBasicUser(emailUtils.generateFirst(), emailUtils.generateLast(), emailUtils.generatePassword(),
-            emailUtils.generateAddress(), emailUtils.generateCity(), emailUtils.generateState(), emailUtils.generateZipCode(),
-            emailUtils.generateMobilePhone(), 'Address_1');
-        
+        LoginPage.createBasicUser(EmailUtils.generateFirst(), EmailUtils.generateLast(), EmailUtils.generatePassword(),
+            EmailUtils.generateAddress(), EmailUtils.generateCity(), EmailUtils.generateState(), EmailUtils.generateZipCode(),
+            EmailUtils.generateMobilePhone(), 'Address_1');
+        assert.strictEqual(AccountPage.pageHeader.getText(), 'MY ACCOUNT');
     });
 })
