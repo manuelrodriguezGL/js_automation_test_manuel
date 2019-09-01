@@ -8,6 +8,7 @@ class AccountPage extends Page {
 
     moveToWomenCategory() { this.womenCategory.moveTo(); }
     moveToClickCasualDressesCategory() {
+        this.casualDressesCategory.waitForDisplayed('2000');
         this.casualDressesCategory.moveTo();
         this.casualDressesCategory.click();
     }

@@ -1,9 +1,11 @@
 const Chance = require('chance');
 
-class EmailUtils {
+class Utils {
     constructor() {
         this.chance = new Chance();
     }
+
+    get screenshotDir() { return '/screenshots/' };
 
     generateEmail() {
         return this.chance.email({ domain: "example.com" });
@@ -33,7 +35,7 @@ class EmailUtils {
         return this.chance.state({ full: true });
     }
 
-    generateZipCode(){
+    generateZipCode() {
         return this.chance.zip();
     }
 
@@ -42,5 +44,5 @@ class EmailUtils {
     }
 }
 
-export default new EmailUtils();
+export default new Utils();
 
