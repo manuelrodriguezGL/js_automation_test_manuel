@@ -36,8 +36,24 @@ class LoginPage extends Page {
     setCity(text) { this.city.setValue(text); }
     setState(text) { this.state.selectByVisibleText(text); }
     setZipCode(text) { this.zipCode.setValue(text); }
+    setPhoneMobile(text) { this.phoneMobile.setValue(text); }
+    setAddressAlias(text) { this.addressAlias.setValue(text); }
 
     clickSubmitAccountButton() { this.submitAccountButton.click(); }
+
+    createBasicUser(firstName, lastName, password, address, city, state, zip, mobile, alias) {
+        this.setFirstNamePersonal(firstName);
+        this.setLastNamePersonal(lastName);
+        this.setPassword(password);
+        this.setAddressLine1(address);
+        this.setCity(city);
+        this.setState(state);
+        this.setZipCode(zip);
+        this.setPhoneMobile(mobile);
+        this.setAddressAlias(alias);
+        
+        this.clickSubmitAccountButton();
+    }
 }
 
 export default new LoginPage();

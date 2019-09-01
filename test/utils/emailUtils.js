@@ -9,7 +9,7 @@ class EmailUtils {
         return this.chance.email({ domain: "example.com" });
     }
 
-    generateName() {
+    generateFirst() {
         return this.chance.first();
     }
 
@@ -21,8 +21,20 @@ class EmailUtils {
         return '123456';
     }
 
+    generateAddress() {
+        return this.chance.address({ short_suffix: true });
+    }
+
     generateCity() {
         return this.chance.city();
+    }
+
+    generateState() {
+        return this.chance.state({ full: true });
+    }
+
+    generateZipCode(){
+        return this.chance.zip();
     }
 
     generateMobilePhone() {

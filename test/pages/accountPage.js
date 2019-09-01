@@ -1,6 +1,8 @@
 import Page from '../pages/page';
 
 class AccountPage extends Page {
+
+    get pageHeader() { return $('.page-heading'); }
     get womenCategory() { return $('a[title="Women"]'); }
     get casualDressesCategory() { return $('a[title="Casual Dresses"]'); }
 
