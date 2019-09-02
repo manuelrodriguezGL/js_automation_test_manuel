@@ -7,8 +7,6 @@ class ProductPage extends Page {
     get addToCartButton() { return $('a[Title="Add to cart"][data-id-product="3"]'); }
     get proceedToCheckoutButton() { return $('a[title="Proceed to checkout"]');}
 
-    //get casualDressesCategory() { return $('a[title="Casual Dresses"]'); }
-
     moveToProduct() { 
         this.product.scrollIntoView();
         this.product.waitForDisplayed('2000');
