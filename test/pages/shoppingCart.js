@@ -1,7 +1,6 @@
 import Page from '../pages/page';
-import { throws } from 'assert';
 
-class ShoppingCart extends Page {
+class ShoppingCartPage extends Page {
 
     get pageHeaderSummary() { return $('#cart_title'); }
     get proceedToCheckoutButtonSummary() { return $('.cart_navigation.clearfix>a[title="Proceed to checkout"]'); }
@@ -53,4 +52,4 @@ class ShoppingCart extends Page {
 }
 
 
-export default new ShoppingCart();
+export default new ShoppingCartPage();
