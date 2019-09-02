@@ -34,7 +34,11 @@ class LoginPage extends Page {
     setLastNameAddress(text) { this.lastNameAddress.setValue(text); }
     setAddressLine1(text) { this.addressLine1.setValue(text); }
     setCity(text) { this.city.setValue(text); }
-    setState(text) { this.state.selectByVisibleText(text); }
+    setState(text) {
+        this.state.scrollIntoView();
+        this.state.click();
+        this.state.selectByVisibleText(text);
+    }
     setZipCode(text) { this.zipCode.setValue(text); }
     setPhoneMobile(text) { this.phoneMobile.setValue(text); }
     setAddressAlias(text) { this.addressAlias.setValue(text); }
@@ -51,7 +55,7 @@ class LoginPage extends Page {
         this.setZipCode(zip);
         this.setPhoneMobile(mobile);
         this.setAddressAlias(alias);
-        
+
         this.clickSubmitAccountButton();
     }
 }

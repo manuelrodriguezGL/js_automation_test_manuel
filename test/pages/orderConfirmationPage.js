@@ -1,11 +1,12 @@
 import Page from '../pages/page';
 
-class OrederConfirmationPage extends Page {
+class OrderConfirmationPage extends Page {
 
-    get pageHeaderSummary() { return $('page-heading'); }
-
+    get pageHeader() { return $('.page-heading'); }
+    get orderCompleteText() { return $('.cheque-indent>.dark'); }
+    
 }
 
 
-export default new OrederConfirmationPage();
+export default new OrderConfirmationPage();
 

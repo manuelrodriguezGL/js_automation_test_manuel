@@ -2,7 +2,7 @@ import Page from '../pages/page';
 
 class ShoppingCartPage extends Page {
 
-    get pageHeaderSummary() { return $('#cart_title'); }
+    get pageHeaderSummary() { return $('#cart_title:not(.heading-counter)'); }
     get proceedToCheckoutButtonSummary() { return $('.cart_navigation.clearfix>a[title="Proceed to checkout"]'); }
 
     get pageHeaderAddresses() { return $('.page-heading'); }
@@ -19,12 +19,12 @@ class ShoppingCartPage extends Page {
     get pageHeaderPayment() { return $('.page-heading'); }
     get payByBankWire() { return $('.bankwire'); }
 
-    get pageHeaderRoderSummary() { return $('.page-heading'); }
+    get pageHeaderOrderSummary() { return $('.page-heading'); }
     get proceedToCheckoutButtonOrderSummary() {
-        return $('.cart_navigation.clearfix>button]');
+        return $('.cart_navigation.clearfix>button');
     }
 
-    clickProceedToCheckout() {
+    clickProceedToCheckoutSummary() {
         this.proceedToCheckoutButtonSummary.scrollIntoView();
         this.proceedToCheckoutButtonSummary.click();
     }
